@@ -36,7 +36,7 @@ body {
 /* 
 header */
 .title h1 {
-  font-size: 16px;
+  font-size: 40px;
   padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
@@ -49,4 +49,27 @@ header */
   display: grid;
   gap: 1.6em;
   grid-template-columns: repeat(5, 1fr);
+}
+
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+.container > div {
+  background: pink;
+  padding: 20px;
+  border: 1px solid brown;
+}
+
+.container .header,
+.container .footer {
+  background-color: lightblue;
+  grid-column: 1/6;
+}
+
+.container .content {
+  grid-column: span 3;
+}
+.container .sidebar {
+  grid-column: span 2;
 }
